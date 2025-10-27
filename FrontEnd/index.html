@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <div class="header">
+            <!-- <button class="menu-toggle">☰</button> -->
+            <input id="search" type="text" placeholder="Search..." >
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            
+            
+            <nav class="navlinks">
+                <a href="#"  class="active" onclick="showContent('pages/dashboard.html', event)">Dashboard</a>
+                <a href="#"  onclick="showContent('pages/booking.html', event)">Booking</a>
+                <a href="#"  onclick="showContent('pages/rooms.html', event)">Rooms</a>
+                <a href="#"  onclick="showContent('pages/guests.html', event)">Guests</a>
+                <a href="#"  onclick="showContent('pages/payments.html', event)">Payment</a>
+            </nav>
+            <a href="#" class="logout">Logout</a>
+        </div>
+        <!-- Main Section -->
+        <div class="main-section" id="main-section">
+                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</body>
+</html>

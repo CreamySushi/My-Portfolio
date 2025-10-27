@@ -1,0 +1,399 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+  /* ------- Color ------- */
+  --gradientcolor1: #15354d;
+  --gradientcolor2: #225c87;
+  --gradientcolor3: #2b79b3;
+  --gradientcolor4: #233542;
+  --gradientcolor5: #4d7694;
+  --gradientcolor6: #71b0de;
+  /* ------- Font-Size ------- */
+
+  /* ------- Font-Style ------- */
+
+
+
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows:  100px 1fr;
+    grid-template-areas: 
+    'logo header'
+    'sidebar main';
+    height: 100vh;
+    
+}
+
+/* ---------------------Sidebar------------------- */
+.sidebar{
+    grid-area: sidebar;
+    background: #1c5bc0; /* dark blue-gray */
+    color: #fff;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-areas:
+    'profile'
+    'navlinks'
+    'logout';
+    padding: 1rem;
+}
+.sidebar div.profile{
+    grid-area:profile ;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.sidebar div.profile img{
+    height: 100px;
+    width: 100px ;
+    border-radius: 50%;
+
+}
+.sidebar nav a{
+  
+    grid-area: navlinks;
+    display: block;
+    color: #cbd5e1;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: 0.2s;
+}
+.sidebar a.logout{
+    grid-area: logout;
+    display: block;
+    color: #cbd5e1;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #7fb0ff; 
+  color: #fff;
+}
+
+/* ----------------------------Header---------------------------- */
+.header {
+    grid-area: header;
+    background-color: #fff;
+    border-bottom: 1px solid #E5E7EB;
+    padding:  1.5rem;
+    align-items: center; /* centers text vertically using grid */
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 100px 3fr 1.5fr;
+    grid-template-areas:
+    'toggle search profile'
+    'space1 space2 button';
+    
+}
+.header input#search{
+    grid-area: search;
+    padding: 10px;
+    width: 350px;
+    margin-left: 150px;
+}
+/* .header button.menu-toggle{
+    grid-area: toggle;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1c5bc0;
+} */
+/* ------------------------Main------------------- */
+.main-section{
+    grid-area: main;
+    background-color: lab(94.1% 0 -0.01);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:  10px;
+    row-gap: 10px;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas: 
+    'overview overview'
+    'rooms rooms'
+    'room-stat guest';
+
+    overflow-y: auto;
+}
+.overview, .rooms, .room-status, .guest-number{
+    font-size: 20px;
+
+}
+
+/* ------------------------Main overview--------------- */
+.overview{
+    grid-area: overview;
+    padding: 25px;
+    border: 1px solid #585c64;
+    background-color: #ffffff;
+    color: #111827;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'overview overview overview overview overview'
+    'card0 card1 card2 card3 card4';
+}
+.check-in{
+    grid-area: card0;
+}
+.check-out{
+    grid-area: card1;
+}
+ .total-in-hotel{
+    grid-area: card2;
+ }
+ .total-room{
+    grid-area: card3;
+ }
+ .occupied-room{
+    grid-area: card4;
+ }
+
+ /* ------------------------Main rooms------------------------- */
+.rooms{
+    grid-area: rooms;
+    border: 1px solid #585c64;
+    color: #111827;
+    padding: 25px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    'room room room room'
+    'card0 card1 card2 card3';
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color: #ffffff;
+}
+.single-bed, .double-bed, .twin-bed, .triple-bed{
+    border: 1px solid #585c64;
+    border-radius: 8px;
+    padding: 25px;
+    
+}
+.single-bed{
+    grid-area: card0;
+}
+.double-bed{
+    grid-area: card1;
+}
+.twin-bed{
+    grid-area: card2;
+}
+.triple-bed{
+    grid-area: card3;
+}
+/* -------------------Main guest----------------------- */
+.guest-number{
+    grid-area: guest;
+    border: 1px solid #585c64;
+    color: #111827;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+/* -------------------------Main room-status-------------------- */
+.room-status{
+    grid-area: room-stat;
+    border: 1px solid #585c64;
+    color: #111827;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas: 
+    'room-status room-status'
+    'table1 table2';
+}
+.table1{
+    grid-area: table1;
+}
+
+.table2{
+    grid-area: table2;
+}
+.table1 table, .table2 table{
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------- Responsive Layout ---------------- */
+/* @media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 200px 1fr;
+  }
+  .header input#search {
+    width: 250px;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: -230px;
+    height: calc(100vh - 60px);
+    width: 230px;
+    z-index: 100;
+    transition: left 0.3s ease;
+  }
+
+  
+  .sidebar.active {
+    left: 0;
+  }
+
+  
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1c5bc0;
+  }
+
+  
+  .header {
+    grid-template-columns: 50px 1fr 50px;
+    padding: 0 1rem;
+  }
+
+  .header input#search {
+    display: none;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'overview'
+      'rooms'
+      'room-stat'
+      'guest';
+  }
+}
+.check-in,
+.double-bed,
+.twin-bed,
+.triple-bed,
+.table1,
+.table2 {
+  width: 100%;
+} */
+/* ---------------- Responsive Main Content ---------------- */
+/* @media (max-width: 1024px) {
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'overview'
+      'rooms'
+      'room-stat'
+      'guest';
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .overview {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'overview overview'
+      'card0 card1'
+      'card2 card3'
+      'card4 card4';
+  }
+
+  .rooms {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'room room'
+      'card0 card1'
+      'card2 card3';
+  }
+
+  .room-status {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'room-status'
+      'table1'
+      'table2';
+  }
+
+  .guest-number {
+    font-size: 16px;
+  }
+} */
+
+/* @media (max-width: 480px) {
+  .overview {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'overview'
+      'card0'
+      'card1'
+      'card2'
+      'card3'
+      'card4';
+  }
+
+  .rooms {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'room'
+      'card0'
+      'card1'
+      'card2'
+      'card3';
+  }
+
+  .room-status {
+    grid-template-columns: 1fr;
+  }
+
+  .main-section {
+    padding: 1rem;
+  }
+} 
+*/
