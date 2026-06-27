@@ -27,7 +27,7 @@ const EMAILJS_PUBLIC_KEY  = '5ZEL5DMwRv1V_e9O5'
 
 const socials = [
   { label: 'GitHub',   href: 'https://github.com/CreamySushi',         Icon: GithubIcon,   detail: 'github.com/CreamySushi' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/',    Icon: LinkedinIcon, detail: 'linkedin.com/in/yourhandle' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/john-aaron-flavien-quirante-5669a32a4/',    Icon: LinkedinIcon, detail: 'linkedin.com/in/john-aaron-flavien-quirante' },
   { label: 'Gmail',    href: 'mailto:johnaaronflavien.quirante@gmail.com',       Icon: GmailIcon,    detail: 'johnaaronflavien.quirante@gmail.com' },
 ]
 
@@ -79,15 +79,16 @@ const Contact = () => {
 
   return (
     <div id='Contact' className="min-h-screen pb-24 bg-(--bg-primary) dark:bg-(--dark-bg-primary)">
-      <div className="px-6 md:px-16 lg:px-24 xl:px-40 pt-24">
+      <div className="text-center justify-center px-6 md:px-16 lg:px-24 xl:px-40 pt-24">
           <h2 className="mt-2 mb-12 text-3xl font-bold text-(--text-primary) dark:text-(--dark-text-primary) relative uppercase inline-block">
             Contact<span className="absolute left-0 -bottom-1 h-0.75 w-full rounded-full bg-[#F97316]" />
           </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className=" text-start justify-center grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
           <div>
-            <p className="text-sm text-(--text-secondary) dark:text-(--text-tertiary) leading-relaxed max-w-sm mb-8">
+            <p className='text-lg font-semibold text-(--accent-primary) dark:text-(--accent-secondary) uppercase'>get in touch</p>
+            <p className="text-sm text-(--text-secondary) dark:text-(--text-tertiary) leading-relaxed max-w-lg mb-8">
               I'm currently open to new opportunities — whether it's a full-time role,
               freelance project, or just a chat about something you're building.
               My inbox is always open.
@@ -193,7 +194,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={!canSubmit}
-                  className="w-full py-3 rounded-xl bg-[var(--accent-primary)] hover:bg-[var(--accent-pressed)] disabled:opacity-40 disabled:cursor-not-allowed text-[var(--dark-text-primary)] text-sm font-semibold active:scale-95 transition-all duration-200"
+                  className="w-full py-3 rounded-xl bg-(--accent-primary) hover:bg-(--accent-pressed) disabled:opacity-40 disabled:cursor-not-allowed text-(--dark-text-primary) text-sm font-semibold active:scale-95 transition-all duration-200"
                 >
                   {status === 'sending' ? 'Sending…' : 'Send message'}
                 </button>
