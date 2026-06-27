@@ -1,4 +1,5 @@
 import React from 'react'
+import transparentImage from '../Images/TransparentImage.png'
 import { FiSun } from "react-icons/fi";
 import { FaRegMoon } from "react-icons/fa6";
 import {
@@ -37,7 +38,7 @@ const Hero = ({ theme, setTheme }) => {
         <nav className='relative z-50 flex items-center justify-between px-6 py-4 w-full md:px-16 lg:px-24 xl:px-40 text-sm  text-(--text-primary) dark:text-(--dark-text-primary)'>
             <div className=''>
                 
-                <a href='/' className='font-bold text-xl tracking-tight'><img src=''/>JAFQ</a>
+                <a href='/' className='font-bold text-xl tracking-tight'>JAFQ</a>
             </div>
             
             
@@ -79,7 +80,7 @@ const Hero = ({ theme, setTheme }) => {
                 </div>
             </div>
             <div className='rounded-[50%] p-1 flex items-center justify-center h-140 w-140 overflow-hidden bg-linear-to-b from-(--accent-secondary) via-(--accent-primary) to-(--accent-pressed) shadow-[0_0_60px_rgba(249,115,22,0.2)]'>
-                <img className='w-full h-full object-cover rounded-[50%]' src='src/assets/Images/TransparentImage.png' alt='Aaron Quirante'/>
+                <img className='w-full h-full object-cover rounded-[50%]' src={transparentImage} alt='Aaron Quirante'/>
             </div>
         </div>
         <div className="relative mt-16 w-full">
