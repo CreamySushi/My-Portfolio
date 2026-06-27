@@ -79,7 +79,7 @@ const Hero = ({ theme, setTheme }) => {
                 </div>
             </div>
             <div className='rounded-[50%] p-1 flex items-center justify-center h-140 w-140 overflow-hidden bg-linear-to-b from-(--accent-secondary) via-(--accent-primary) to-(--accent-pressed) shadow-[0_0_60px_rgba(249,115,22,0.2)]'>
-                <img className='w-full h-full object-cover rounded-[50%]' src='src\assets\Images\TransparentImage.png' alt='Aaron Quirante'/>
+                <img className='w-full h-full object-cover rounded-[50%]' src='src/assets/Images/TransparentImage.png' alt='Aaron Quirante'/>
             </div>
         </div>
         <div className="relative mt-16 w-full">

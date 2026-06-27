@@ -4,7 +4,7 @@ const Projects = () => {
   const myProjects = [
     { id: 1, srcImg: '/src/assets/Images/RACQ-Project.png', title: "RACQ Hotel Reservation",  tools: ['Python', 'Flask', 'Render', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
       description: "A full-stack hotel booking system with real-time availability, room management, and guest checkout flow.", link: "https://racq-hotel-management.onrender.com/"},
-    { id: 2, srcImg: '/src/assets/Images/CalorieBurnPredictor.png', title: "Calorie Burn Predictor", tools: ['Python', 'Flask', 'Scikit-learn', 'Streamlit', 'Pandas', 'HTML', 'CSS', 'JavaScript'],
+    { id: 2, srcImg: 'src/assets/Images/CalorieBurnPredictor.png', title: "Calorie Burn Predictor", tools: ['Python', 'Flask', 'Scikit-learn', 'Streamlit', 'Pandas', 'HTML', 'CSS', 'JavaScript'],
       description: "Machine learning model that predicts calorie expenditure from biometric and activity inputs.", link: "https://calorieburnpred2ctor.streamlit.app/"},
   ]
 
@@ -36,20 +36,3 @@ const Projects = () => {
 }
 
 export default Projects
-
-{/* <div className='flex flex-wrap items-center justify-center gap-8 pt-12 dark:bg-zinc-800'>
-                {myProjects.map((project) => (
-                <div key={project.id} className='p-4 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 hover:-translate-y-1 transition duration-300 rounded-lg shadow shadow-black/10 max-w-80 text-left'>
-                    <img className='rounded-md max-h-40 w-full object-cover' src={project.srcImg} alt={project.title} />
-                    <h3 className='text-gray-900 dark:text-slate-100 text-sm/6 mt-2 ml-2 mb-2 font-semibold'>{project.title}</h3>
-                    <p className='text-zinc-400 text-sm/6 mt-2 ml-2 mb-2'>{project.description}</p>
-                    <div className='flex flex-wrap gap-1.5 ml-2 mb-4 mt-4'>
-                        {project.tools?.map((tool, index) => (
-                            <span key={index} className='bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs px-2 py-0.5 rounded font-medium'>
-                            {tool}
-                            </span>))}
-                    </div>
-                    <a href={project.link} className='text-amber-500 hover:underline ml-2 block mt-6 mb-6'>View Project</a>
-                </div>
-                ))}
-            </div> */}
