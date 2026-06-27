@@ -1,10 +1,12 @@
 import React from 'react'
+import racqProject from '../Images/RACQ-Project.png'
+import calorieBurnPredictor from '../Images/CalorieBurnPredictor.png'
 
 const Projects = () => {
   const myProjects = [
-    { id: 1, srcImg: '/src/assets/Images/RACQ-Project.png', title: "RACQ Hotel Reservation",  tools: ['Python', 'Flask', 'Render', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
+    { id: 1, srcImg: racqProject, title: "RACQ Hotel Reservation",  tools: ['Python', 'Flask', 'Render', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
       description: "A full-stack hotel booking system with real-time availability, room management, and guest checkout flow.", link: "https://racq-hotel-management.onrender.com/"},
-    { id: 2, srcImg: 'src/assets/Images/CalorieBurnPredictor.png', title: "Calorie Burn Predictor", tools: ['Python', 'Flask', 'Scikit-learn', 'Streamlit', 'Pandas', 'HTML', 'CSS', 'JavaScript'],
+    { id: 2, srcImg: calorieBurnPredictor, title: "Calorie Burn Predictor", tools: ['Python', 'Flask', 'Scikit-learn', 'Streamlit', 'Pandas', 'HTML', 'CSS', 'JavaScript'],
       description: "Machine learning model that predicts calorie expenditure from biometric and activity inputs.", link: "https://calorieburnpred2ctor.streamlit.app/"},
   ]
 
