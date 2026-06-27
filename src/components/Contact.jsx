@@ -70,8 +70,8 @@ const Contact = () => {
   }
 
   const inputBase =
-    'w-full rounded-xl border px-4 py-3 text-sm bg-white dark:bg-[#1A1A18] text-[#111110] dark:text-[#FAFAF9] placeholder:text-[#888780] outline-none transition-all duration-200 '
-  const inputIdle  = 'border-[#E8E6DF] dark:border-[#3A3A38] focus:border-[#F97316] dark:focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/20'
+    'w-full rounded-xl border px-4 py-3 text-sm bg-white dark:bg-(--text-primary) text-[#111110] dark:text-(--dark-text-primary) placeholder:text-(--text-tertiary) outline-none transition-all duration-200 '
+  const inputIdle  = 'border-(--border) dark:border-(--dark-border) focus:border-(--accent-primary) dark:focus:border-(--accent-primary) focus:ring-2 focus:ring-(--accent-primary)/20'
   const inputError = 'border-red-400 dark:border-red-500 focus:border-red-400 focus:ring-2 focus:ring-red-400/20'
 
   const fieldClass = (name) =>
@@ -81,7 +81,7 @@ const Contact = () => {
     <div id='Contact' className="min-h-screen pb-24 bg-(--bg-primary) dark:bg-(--dark-bg-primary)">
       <div className="text-center justify-center px-6 md:px-16 lg:px-24 xl:px-40 pt-24">
           <h2 className="mt-2 mb-12 text-3xl font-bold text-(--text-primary) dark:text-(--dark-text-primary) relative uppercase inline-block">
-            Contact<span className="absolute left-0 -bottom-1 h-0.75 w-full rounded-full bg-[#F97316]" />
+            Contact<span className="absolute left-0 -bottom-1 h-0.75 w-full rounded-full bg-(--accent-primary)" />
           </h2>
 
         <div className=" text-start justify-center grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
@@ -101,32 +101,32 @@ const Contact = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 px-4 py-3 rounded-xl border border-[#E8E6DF] dark:border-[#3A3A38] bg-white dark:bg-[#1A1A18] hover:border-[#F97316]/50 dark:hover:border-[#F97316]/50 transition-all duration-200"
+                  className="group flex items-center gap-4 px-4 py-3 rounded-xl border border-(--border) dark:border-(--dark-border) bg-(--bg-primary) dark:bg-(--dark-bg-primary) hover:border-(--accent-primary)/50 dark:hover:border-(--accent-primary)/50 transition-all duration-200"
                 >
-                  <span className="p-2 rounded-lg bg-[#FFF3E0] dark:bg-[#F97316]/10 text-[#F97316] group-hover:bg-[#F97316] group-hover:text-white transition-all duration-200">
+                  <span className="p-2 rounded-lg bg-(--bg-tertiary) dark:bg-(--accent-primary)/10 text-(--accent-primary) group-hover:bg-(--accent-primary) group-hover:text-(--dark-text-primary) transition-all duration-200">
                     <Icon />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold text-[#111110] dark:text-[#FAFAF9]">{label}</p>
-                    <p className="text-xs text-[#888780]">{detail}</p>
+                    <p className="text-xs font-semibold text-(--dark-bg-primary) dark:text-(--bg-primary)">{label}</p>
+                    <p className="text-xs text-(--text-tertiary)">{detail}</p>
                   </div>
-                  <span className="ml-auto text-[#888780] group-hover:text-[#F97316] group-hover:translate-x-0.5 transition-all duration-200 text-sm">↗</span>
+                  <span className="ml-auto text-(--text-tertiary) group-hover:text-(--accent-primary)  group-hover:translate-x-0.5 transition-all duration-200 text-sm">↗</span>
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="border border-[#E8E6DF] dark:border-[#3A3A38] rounded-2xl px-6 py-6 bg-white dark:bg-[#1A1A18]">
+          <div className="border border-(--border) dark:border-(--dark-border) rounded-2xl px-6 py-6 bg-(--bg-primary) dark:bg-(--dark-bg-secondary)">
             {status === 'success' ? (
               <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FFF3E0] dark:bg-[#F97316]/10 flex items-center justify-center text-[#F97316] text-2xl">
+                <div className="w-12 h-12 rounded-full bg-(--bg-tertiary) dark:bg-(--accent-primary)/10 flex items-center justify-center text-(--accent-primary) text-2xl">
                   ✓
                 </div>
-                <p className="text-sm font-semibold text-[#111110] dark:text-[#FAFAF9]">Message sent!</p>
-                <p className="text-xs text-[#888780]">Thanks for reaching out — I'll get back to you soon.</p>
+                <p className="text-sm font-semibold text-(--text-primary) dark:text-(--dark-text-primary)">Message sent!</p>
+                <p className="text-xs text-(--text-tertiary)">Thanks for reaching out — I'll get back to you soon.</p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="mt-2 text-xs text-[#F97316] hover:text-[#EA580C] font-semibold transition-colors"
+                  className="mt-2 text-xs text-(text-(--accent-primary)) hover:text-(text-(--accent-pressed)) font-semibold transition-colors"
                 >
                   Send another
                 </button>
@@ -134,7 +134,7 @@ const Contact = () => {
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
                 <div>
-                  <label className="text-xs font-semibold text-[#3A3A38] dark:text-[#888780] block mb-1.5">
+                  <label className="text-xs font-semibold text-(--text-secondary) dark:text-(--text-tertiary) block mb-1.5">
                     Name
                   </label>
                   <input
@@ -147,30 +147,30 @@ const Contact = () => {
                     className={fieldClass('name')}
                   />
                   {touched.name && !valid.name && (
-                    <p className="text-xs text-red-400 mt-1">Please enter your name.</p>
+                    <p className="text-xs text-(--accent-error) mt-1">Please enter your name.</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-[#3A3A38] dark:text-[#888780] block mb-1.5">
+                  <label className="text-xs font-semibold text-(--text-secondary) dark:text-(--text-tertiary) block mb-1.5">
                     Email
                   </label>
                   <input
                     name="email"
                     type="email"
-                    placeholder="you@email.com"
+                    placeholder="example@email.com"
                     value={form.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={fieldClass('email')}
                   />
                   {touched.email && !valid.email && (
-                    <p className="text-xs text-red-400 mt-1">Please enter a valid email.</p>
+                    <p className="text-xs text-(--accent-error) mt-1">Please enter a valid email.</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-[#3A3A38] dark:text-[#888780] block mb-1.5">
+                  <label className="text-xs font-semibold text-(--text-secondary) dark:text-(--text-tertiary) block mb-1.5">
                     Message
                   </label>
                   <textarea
@@ -183,12 +183,12 @@ const Contact = () => {
                     className={fieldClass('message') + ' resize-none'}
                   />
                   {touched.message && !valid.message && (
-                    <p className="text-xs text-red-400 mt-1">Message must be at least 10 characters.</p>
+                    <p className="text-xs text-(--accent-error) mt-1">Message must be at least 10 characters.</p>
                   )}
                 </div>
 
                 {status === 'error' && (
-                  <p className="text-xs text-red-400">Something went wrong. Please try again or email me directly.</p>
+                  <p className="text-xs text-(--accent-error)">Something went wrong. Please try again or email me directly.</p>
                 )}
 
                 <button
