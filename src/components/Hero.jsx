@@ -67,8 +67,8 @@ const Hero = ({ theme, setTheme }) => {
                 
 
                 <p className='max-w-sm mt-6 text-base text-(--text-secondary) dark:text-(--text-tertiary) leading-relaxed md:max-w-md'>
-                    Computer Engineering graduate building fast, clean web experiences. 
-                    Actively seeking opportunities to ship high-quality products. 
+                    I am a Computer Engineering graduate who builds fast, clean web experiences. 
+                    I am actively seeking opportunities to ship high-quality products. 
                 </p>
                 <div className='mt-8 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start  gap-4'>
                     <a onClick={(e) => scrollTo(e, 'Projects')} className='px-6 py-4 rounded-full bg-(--accent-primary) hover:bg-(--accent-pressed) text-(--dark-text-primary) font-semibold text-sm active:scale-95 transition-all duration-200'>
