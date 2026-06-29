@@ -56,21 +56,21 @@ const Hero = ({ theme, setTheme }) => {
             </div>
         </nav>
 
-        <div className='relative flex flex-col-reverse md:flex-row items-center justify-center mt-10 px-6  py-4 w-full gap-8 md:gap-16 md:px-16 lg:px-24 xl:px-40 flex-1'>
+        <div className='relative flex flex-col-reverse md:flex-row items-center justify-center mt-10 px-6 py-4 w-full gap-8 md:gap-16 md:px-16 lg:px-24 xl:px-40 flex-1'>
 
-            <div className='flex-1 max-w-lg text-center md:text-left'>
-                <span className='inline-block text-xs font-semibold tracking-widest uppercase text-(--text-tertiary) mb-4'>Web Developer · Philippines</span>
-                <h1 className=' relative flex gap-4 text-5xl md:text-6xl font-bold leading-tight text-(--text-primary) dark:text-(--dark-text-primary) mb-2' >Aaron <br /> 
+            <div className='flex-1 max-w-md text-center md:text-left '>
+                <span className='inline-block text-xs font-semibold tracking-widest uppercase text-(--text-tertiary) mb-4 '>Web Developer · Philippines</span>
+                <h1 className='relative inline-flex gap-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-(--text-primary) dark:text-(--dark-text-primary) mb-2' >Aaron <br /> 
                     <span className='text-(--accent-primary)'> Quirante</span>
                     <span className='absolute left-0 -bottom-1 h-1 w-full rounded-full bg-(--accent-primary)'/>
                 </h1>
                 
 
-                <p className='max-w-md mt-6 text-base text-(--text-secondary) dark:text-(--text-tertiary) leading-relaxed'>
+                <p className='max-w-sm mt-6 text-base text-(--text-secondary) dark:text-(--text-tertiary) leading-relaxed md:max-w-md'>
                     Computer Engineering graduate building fast, clean web experiences. 
                     Actively seeking opportunities to ship high-quality products. 
                 </p>
-                <div className='mt-8 flex flex-col sm:flex-row items-center md:items-start gap-4'>
+                <div className='mt-8 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start  gap-4'>
                     <a onClick={(e) => scrollTo(e, 'Projects')} className='px-6 py-4 rounded-full bg-(--accent-primary) hover:bg-(--accent-pressed) text-(--dark-text-primary) font-semibold text-sm active:scale-95 transition-all duration-200'>
                         See my work
                     </a>
@@ -79,7 +79,7 @@ const Hero = ({ theme, setTheme }) => {
                     </a>
                 </div>
             </div>
-            <div className='rounded-[50%] p-1 flex items-center justify-center h-140 w-140 overflow-hidden bg-linear-to-b from-(--accent-secondary) via-(--accent-primary) to-(--accent-pressed) shadow-[0_0_60px_rgba(249,115,22,0.2)]'>
+            <div className='rounded-[50%] p-1 items-center justify-center h-80 w-80 overflow-hidden bg-linear-to-b from-(--accent-secondary) via-(--accent-primary) to-(--accent-pressed) shadow-[0_0_60px_rgba(249,115,22,0.2)] sm:h-80 sm:w-80 md:h-100 md:w-100 lg:h-120 lg:w-120 xl:h-140 xl:w-140'>
                 <img className='w-full h-full object-cover rounded-[50%]' src={transparentImage} alt='Aaron Quirante'/>
             </div>
         </div>
