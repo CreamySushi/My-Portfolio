@@ -23,11 +23,17 @@ const techStack = [
 const scrollingItems = [...techStack, ...techStack]
 
 const Hero = ({ theme, setTheme }) => {
+
   const scrollTo = (e, id) => {
-  e.preventDefault()
-  const el = document.getElementById(id)
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
-}
+    e.preventDefault()
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  
   return (
     <div id='/' className='min-h-screen relative overflow-hidden flex flex-col'>
 
@@ -49,7 +55,7 @@ const Hero = ({ theme, setTheme }) => {
             </div>
 
             <div className='flex items-center gap-2'>
-                <button onClick={() => setTheme(prev => !prev)} className='p-2 rounded-lg text-(--text-tertiary) hover:text-(--accent-primary) hover:bg-(--accent-primary)/10 transition-all duration-200' aria-label='Toggle theme'>{theme ? <FaRegMoon size={16} /> : <FiSun size={16} />}</button>
+                <button onClick={toggleTheme} className='p-2 rounded-lg text-(--text-tertiary) hover:text-(--accent-primary) hover:bg-(--accent-primary)/10 transition-all duration-200' aria-label='Toggle theme'>{theme === 'dark' ? <FaRegMoon size={16} /> : <FiSun size={16} />}</button>
                 <a href='' className='hidden md:block px-6 py-2 bg-(--accent-primary) hover:bg-(--accent-pressed) active:scale-95 transition-all rounded-full text-(--dark-text-primary) font-semibold text-sm duration-200'>
                    Resume
                 </a>
