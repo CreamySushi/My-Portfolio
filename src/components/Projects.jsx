@@ -1,6 +1,7 @@
 import React from 'react'
 import racqProject from '../Images/RACQ-Project.png'
 import calorieBurnPredictor from '../Images/CalorieBurnPredictor.png'
+import focusTaskApp from '../Images/focusTaskApp.png'
 
 const Projects = () => {
   const myProjects = [
