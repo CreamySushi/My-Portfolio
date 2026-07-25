@@ -10,7 +10,7 @@ const About = () => {
 
   const experiences = [
     { id: 1, role: "Game Developer Intern", company: "Wally Wombats", location: "Las Vegas, Nevada, US", year: "May 2025 – Sept 2025", type: "OJT",
-      descrition: ["Develop a 3D mobile game through Unity that cater children and design 3D model and animation in Blender",  "Manage builds with Git and led playtesting and bug fixes","dwapdohadopahdopahdopahdopawdhoawddawdpoiajdoiajdopadhpoahdpoaw","dawdadadwadadawdaw"]},
+      descrition: ["Develop a 3D mobile game through Unity that cater children and design 3D model and animation in Blender",  "Manage builds with Git and led playtesting and bug fixes","Published in AppStore and Google Play Store"]},
   ]
 
   const certifications = [

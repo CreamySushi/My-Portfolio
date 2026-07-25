@@ -15,12 +15,21 @@ const Layout = () => {
   e.preventDefault()
   const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+  };
 
-  const [Theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('curTheme');
+    return savedTheme || 'light';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('curTheme', theme)
+  }, [theme]);
+  
+  
   return (
-    <div className={`${Theme ? "dark" : ""} bg-(--bg-primary) dark:bg-(--dark-bg-primary)`} >
-        <Hero theme={Theme} setTheme={setTheme} />
+    <div className={`${theme === 'dark' ? 'dark' : ''} bg-(--bg-primary) dark:bg-(--dark-bg-primary)`} >
+        <Hero theme={theme} setTheme={setTheme} />
         <About/>
         <Projects/>
         <Contact/>
