@@ -1,11 +1,15 @@
 import Layout from "./pages/Layout";
+import Resume from "./pages/Resume";
+import { Routes, Route } from "react-router-dom"
 
 export default function App() {
   return (
-    <>
-      <Layout/>
-      
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </div>
   );
 }
 
