@@ -24,7 +24,6 @@ const techStack = [
 const scrollingItems = [...techStack, ...techStack]
 
 const Hero = ({ theme, setTheme }) => {
-
   const scrollTo = (e, id) => {
     e.preventDefault()
     const el = document.getElementById(id)
